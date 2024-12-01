@@ -3,7 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Web Template</title>
+    <title>Weather App</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <h1>My Weather App</h1>
+      <div class="query-container">
+        <form action="">
+          <fieldset>
+            <legend>Find weather at location:</legend>
+            <div class="query">
+              <input type="text" placeholder="City..." required />
+              <button type="submit">
+                <img src="./images/search.svg" alt="Search icon" />
+              </button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div class="results-container"></div>
+    </main>
+  </body>
 </html>
