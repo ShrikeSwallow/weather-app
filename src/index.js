@@ -1,6 +1,7 @@
 import "./styles.css";
 import { getWeather } from "./getWeather";
 import { drawResults } from "./drawResults";
+import { drawError } from "./drawError";
 
 let city = "Łomża";
 let cityFormatted = city.toLowerCase().split(" ").join("%20");
@@ -19,5 +20,9 @@ queryForm.addEventListener("submit", (event) => {
     })
     .catch(() => {
       console.log(new Error("This city doesn't exist"));
+      drawError(city);
+    })
+    .finally(() => {
+      queryForm.reset();
     });
 });
